@@ -12,9 +12,18 @@ https://lanciweb.github.io/demo/api/pictures/
 
 Studiamo bene la risposta e i dati che ci fornisce iniziando a pensare a come poterli sfruttare.
 
+la chiamata mi da come risultato un array di oggetti che contiene il contenuto da inserire nelle card;
+gli oggetti sono composti da: un id univoco utile per dare un id unico ai contenuti della card; un titolo; una data; l'url dell'immagine da aggiungere
+ciclando l'array posso crearmi una costante che contiene l'immagine da inserire nella card con sotto la data in cui è stata scattata ed il luogo tramite un
+template litteral (``); l'id posso inoltre sfruttarlo per dare un id unico ad ogni card come ad esempio  id="card${id}" che al primo ciclo verrebbe come id:
+card1, utile in futuro per andare a prendere i singoli nodi all'interno della card.
+
+
 Milestone 3
 
 Inseriamo un foglio JavaScript ed effettuiamo una chiamata AJAX all’API, sfruttando la risposta per generare dinamicamente in pagina una serie di foto!
+
+
 
 Font utilizzati:
 
