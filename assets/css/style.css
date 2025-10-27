@@ -5,18 +5,22 @@
 
 }
 
-.debug{
-    main{
-        .container{
+.debug {
+    main {
+        .container {
             height: 800px;
             background-color: blue;
-            .row{
+
+            .row {
                 background-color: red;
-                .col{
+
+                .col {
                     background-color: yellow;
-                    .card{
+
+                    .card {
                         background-color: purple;
-                        div{
+
+                        div {
                             background-color: green;
                             height: 300px;
                             width: 300px;
@@ -25,7 +29,8 @@
                 }
             }
 
-        }}
+        }
+    }
 }
 
 header {
@@ -33,10 +38,25 @@ header {
     text-align: center;
     background-image: url(../img/wall.png);
     padding: 1rem;
-    font-family: "Edu Tas Beginner";
+    font-family: "Edu Tas Beginner", "sans-serif";
     font-size: 5rem;
 }
 
-main{
+main {
     background-image: url(../img/cork.png);
+}
+
+.card_edit {
+    background-color: white;
+    padding: 0.8rem 0 0.8rem 0.8rem;
+    margin-top: 3rem;
+    img {
+        width: 95%;
+
+    }
+}
+.card_body{
+    background-color: white;
+    padding: 0 0.8rem;
+    font-family: "Sometype Mono", "monospace";
 }
