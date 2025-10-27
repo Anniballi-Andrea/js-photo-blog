@@ -59,11 +59,14 @@ main {
     
     p{
         margin-bottom: 0;
+        margin-top: 1rem;
         font-family: "Sometype Mono", "monospace";
+        color: #777c7f;
     }
     h4{
         font-family: "Edu Tas Beginner", "sans-serif";
-        padding-bottom: 1rem;
+        margin-bottom: 0;
+        
     }
 }
 

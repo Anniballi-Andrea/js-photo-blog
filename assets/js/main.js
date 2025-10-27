@@ -74,7 +74,7 @@ fetch("https://lanciweb.github.io/demo/api/pictures/")
             const imgEl = el.url
             //console.log(idEl, titleEl, dateEl, imgEL)
             replaceInner += `
-            <div id="${idEl}" class="col col-md-2 col-lg-4">
+            <div id="${idEl}" class="col-12 col-md-6 col-lg-4">
                 <div class="my_card">
                     <img class="card_fix" src="./assets/img/pin.svg" alt="">
                     <div class="card_edit">  
