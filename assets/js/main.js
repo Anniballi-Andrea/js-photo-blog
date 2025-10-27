@@ -64,7 +64,7 @@ fetch("https://lanciweb.github.io/demo/api/pictures/")
     .then(response => response.json())
     .then(data => {
          //dichiaro una variabile che si aggiornerà ad ogni ciclo con nuove parti di codice html
-        let replaceInner
+        let replaceInner=``
 
         //ciclo l'array di informazioni per salvarmi i singoli oggetti in delle variabili
         data.forEach(el => {
@@ -91,10 +91,12 @@ fetch("https://lanciweb.github.io/demo/api/pictures/")
 
         });
 
-        console.log(replaceInner)
+        //console.log(replaceInner)
+        //ad ogni ciclo stampo nel dom una nuova card contenente le informazioni che voglio
+        rowEl.innerHTML = replaceInner
     })
 
 
 
-//ad ogni ciclo stampo nel dom una nuova card contenente le informazioni che voglio
+
 
