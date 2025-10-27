@@ -35,3 +35,28 @@ Bonus
 
 rendi la pagina responsive, in modo che su mobile e tablet le foto si dispongano man mano una sotto l’altra ed il titolo abbia una dimensione adeguata
  */
+
+/* Milestone 3
+
+Inseriamo un foglio JavaScript ed effettuiamo una chiamata AJAX all’API, sfruttando la risposta per generare dinamicamente in pagina una serie di foto!*/
+
+//sfrutto la chiamata AJAX per ottenere l'array di oggetti da cui devo prendere le informazioni per comporre la pagina e le salvo in un array
+fetch("https://lanciweb.github.io/demo/api/pictures/")
+.then(response => response.json())
+.then(data=>{
+    //ciclo l'array di informazioni per salvarmi i singoli oggetti in delle variabili
+    data.forEach(el => {
+        const idEl = el.id
+        const titleEl = el.title
+        const dateEl = el.date
+        const imgEL = el.url
+        console.log(idEl, titleEl, dateEl, imgEL)
+        
+    });
+    console.log(data)
+})
+
+
+
+//ad ogni ciclo stampo nel dom una nuova card contenente le informazioni che voglio
+
