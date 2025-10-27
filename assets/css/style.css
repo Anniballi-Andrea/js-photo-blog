@@ -5,6 +5,29 @@
 
 }
 
+.debug{
+    main{
+        .container{
+            height: 800px;
+            background-color: blue;
+            .row{
+                background-color: red;
+                .col{
+                    background-color: yellow;
+                    .card{
+                        background-color: purple;
+                        div{
+                            background-color: green;
+                            height: 300px;
+                            width: 300px;
+                        }
+                    }
+                }
+            }
+
+        }}
+}
+
 header {
 
     text-align: center;
