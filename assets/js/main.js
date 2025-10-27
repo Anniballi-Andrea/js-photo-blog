@@ -63,8 +63,8 @@ const rowEl = document.querySelector('.row')
 fetch("https://lanciweb.github.io/demo/api/pictures/")
     .then(response => response.json())
     .then(data => {
-         //dichiaro una variabile che si aggiornerà ad ogni ciclo con nuove parti di codice html
-        let replaceInner=``
+        //dichiaro una variabile che si aggiornerà ad ogni ciclo con nuove parti di codice html
+        let replaceInner = ``
 
         //ciclo l'array di informazioni per salvarmi i singoli oggetti in delle variabili
         data.forEach(el => {
@@ -75,19 +75,24 @@ fetch("https://lanciweb.github.io/demo/api/pictures/")
             //console.log(idEl, titleEl, dateEl, imgEL)
             replaceInner += `
             <div id="${idEl}" class="col col-md-2 col-lg-4">
-                <div class="card_edit">
-                    <div>
-                        <img src="${imgEl}" alt="un immagine di ${titleEl}">
+                <div class="my_card">
+                    <img class="card_fix" src="./assets/img/pin.svg" alt="">
+                    <div class="card_edit">  
+                        <div class="img_container">
+                            <img src="${imgEl}" alt="un immagine di ${titleEl}">
+                        </div>
+                    </div>
+                    <div class="card_body">
+                        <p>
+                        ${dateEl}
+                        </p>
+                        <h4>
+                        <strong>${titleEl}</strong>
+                        </h4>
                     </div>
                 </div>
-                <div class="card_body">
-                    <p>
-                        ${dateEl}
-                    </p>
-                    <h4>${titleEl}</h4>
-                        
-                </div>
-            </div>`
+            </div>
+            `
 
         });
 

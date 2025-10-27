@@ -48,15 +48,36 @@ main {
 
 .card_edit {
     background-color: white;
-    padding: 0.8rem 0 0.8rem 0.8rem;
-    margin-top: 3rem;
-    img {
+    .img_container > img {
         width: 95%;
 
     }
 }
 .card_body{
     background-color: white;
-    padding: 0 0.8rem;
-    font-family: "Sometype Mono", "monospace";
+    
+    
+    p{
+        margin-bottom: 0;
+        font-family: "Sometype Mono", "monospace";
+    }
+    h4{
+        font-family: "Edu Tas Beginner", "sans-serif";
+        padding-bottom: 1rem;
+    }
+}
+
+.my_card{
+    background-color: white;
+    margin-top: 3rem;
+    padding: 0.8rem 0 0.8rem 0.8rem;
+    position: relative;
+    box-shadow: 1px 1px 5px;
+    margin-bottom: 1rem;
+    .card_fix{
+        position: absolute;
+        top: -16px;
+        left: 135px;
+        
+    }
 }
