@@ -44,6 +44,7 @@ header {
 
 main {
     background-image: url(../img/cork.png);
+    
 }
 
 .card_edit {
@@ -80,7 +81,30 @@ main {
     .card_fix{
         position: absolute;
         top: -16px;
-        left: 135px;
+        left: 45%;
         
+    }
+}
+.relative{
+    
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    .overlay{
+        position: absolute;
+        left: 30%;
+        z-index: 3;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        button{
+            margin: 1rem 0;
+            padding: 0.2rem 0.5rem;
+            border: 0;
+            display: none;
+        }
+        img{
+            display: none;
+        }
     }
 }
