@@ -44,6 +44,10 @@ Inseriamo un foglio JavaScript ed effettuiamo una chiamata AJAX all’API, sfrut
 const rowEl = document.querySelector('.row')
 const overBtn = document.querySelector('button')
 const overImg = document.querySelector('.overlay img')
+overBtn.addEventListener('click', ()=> {
+    overBtn.style.display = 'none'
+    overImg.style.display = 'none'
+})
 //console.log(rowEl)
 
 /*mi salvo per sicurezza le informazioni da inserire in un commento
@@ -108,6 +112,7 @@ fetch("https://lanciweb.github.io/demo/api/pictures/")
         data.forEach(el => {
             //console.log(el)
             let imgCardId = el.id
+            
             //console.log(imgCardId)
             const imgCardEl = document.getElementById(imgCardId)
             console.log(imgCardEl)
