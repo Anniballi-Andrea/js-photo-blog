@@ -74,12 +74,12 @@ fetch("https://lanciweb.github.io/demo/api/pictures/")
             const imgEl = el.url
             //console.log(idEl, titleEl, dateEl, imgEL)
             replaceInner += `
-            <div id="${idEl}" class="col-12 col-md-6 col-lg-4">
+            <div  class="col-12 col-md-6 col-lg-4">
                 <div class="my_card">
                     <img class="card_fix" src="./assets/img/pin.svg" alt="">
                     <div class="card_edit">  
                         <div class="img_container">
-                            <img src="${imgEl}" alt="un immagine di ${titleEl}">
+                            <img id="${idEl}"src="${imgEl}" alt="un immagine di ${titleEl}">
                         </div>
                     </div>
                     <div class="card_body">
@@ -94,14 +94,34 @@ fetch("https://lanciweb.github.io/demo/api/pictures/")
             </div>
             `
 
-        });
 
+
+
+
+        });
         //console.log(replaceInner)
         //ad ogni ciclo stampo nel dom una nuova card contenente le informazioni che voglio
+
         rowEl.innerHTML = replaceInner
+        data.forEach(el => {
+            //console.log(el)
+            let imgCardId = el.id
+            //console.log(imgCardId)
+            const imgCardEl = document.getElementById(imgCardId)
+            console.log(imgCardEl)
+
+            imgCardEl.addEventListener('click',() => {
+                //console.log('cliccato')
+
+                
+            })
+        })
+
+
+
     })
 
-   /* CONSEGNA
+/* CONSEGNA
 
 Milestone 1
 
@@ -112,6 +132,8 @@ Milestone 2
 Facciamo sparire l’overlay con l’aiuto di una classe CSS che imposti il display: none .
 
 Dopodiché facciamo sì che cliccando una qualunque foto. L’overlay ricompaia.
+
+
 
 Cliccando invece il button di chiusura, l’overlay scompare nuovamente.
 
