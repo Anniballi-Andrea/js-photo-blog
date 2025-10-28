@@ -116,12 +116,12 @@ fetch("https://lanciweb.github.io/demo/api/pictures/")
             
             //console.log(imgCardId)
             const imgCardEl = document.getElementById(imgCardId)
-            console.log(imgCardEl)
+            //console.log(imgCardEl)
 
             imgCardEl.addEventListener('click',() => {
                 //console.log(overImg)
                 overBtn.style.display = 'block'
-                console.log(imgCard)
+               // console.log(imgCard)
                 overImg.src = imgCard
                 overImg.style.display = 'block'
 
