@@ -42,6 +42,8 @@ Inseriamo un foglio JavaScript ed effettuiamo una chiamata AJAX all’API, sfrut
 //devo prima prendere il nodo della dom dove inserire le card altrimenti non posso fa niente e lo salvo in una costante
 
 const rowEl = document.querySelector('.row')
+const overBtn = document.querySelector('button')
+const overImg = document.querySelector('.overlay img')
 //console.log(rowEl)
 
 /*mi salvo per sicurezza le informazioni da inserire in un commento
@@ -111,9 +113,11 @@ fetch("https://lanciweb.github.io/demo/api/pictures/")
             console.log(imgCardEl)
 
             imgCardEl.addEventListener('click',() => {
-                //console.log('cliccato')
+                //console.log(overImg)
+                overBtn.style.display = 'block'
+                overImg.style.display = 'block'
 
-                
+
             })
         })
 
