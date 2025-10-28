@@ -44,7 +44,7 @@ Inseriamo un foglio JavaScript ed effettuiamo una chiamata AJAX all’API, sfrut
 const rowEl = document.querySelector('.row')
 const overBtn = document.querySelector('button')
 const overImg = document.querySelector('.overlay img')
-overBtn.addEventListener('click', ()=> {
+overBtn.addEventListener('click', () => {
     overBtn.style.display = 'none'
     overImg.style.display = 'none'
 })
@@ -112,26 +112,24 @@ fetch("https://lanciweb.github.io/demo/api/pictures/")
         data.forEach(el => {
             //console.log(el)
             let imgCardId = el.id
-            let imgCard= el.url
-            
+            let imgCard = el.url
+
             //console.log(imgCardId)
             const imgCardEl = document.getElementById(imgCardId)
             //console.log(imgCardEl)
 
-            imgCardEl.addEventListener('click',function() {
+            imgCardEl.addEventListener('click', () => {
                 //console.log(overImg)
                 overBtn.style.display = 'block'
-               // console.log(imgCard)
+                // console.log(imgCard)
                 overImg.src = imgCard
                 overImg.style.display = 'block'
 
-
-
             });
-            imgCardEl.addEventListener('mouseenter', function() {
-                console.log('il mouse deve cambiare')
-                console.log(overImg)
-            })
+            
+            
+            
+
         })
 
 
@@ -159,9 +157,3 @@ Milestone 3
 Inseriamo il pezzo di logica finale: quando una foto viene cliccata, dobbiamo fare in modo che sia proprio quella foto a essere mostrata all’interno dell’overlay.
 
 Ci sono diversi modi di farlo, prova a sperimentare 🙂*/
-
-
-
-
-
-
