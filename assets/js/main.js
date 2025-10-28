@@ -118,7 +118,7 @@ fetch("https://lanciweb.github.io/demo/api/pictures/")
             const imgCardEl = document.getElementById(imgCardId)
             //console.log(imgCardEl)
 
-            imgCardEl.addEventListener('click',() => {
+            imgCardEl.addEventListener('click',function() {
                 //console.log(overImg)
                 overBtn.style.display = 'block'
                // console.log(imgCard)
@@ -127,6 +127,10 @@ fetch("https://lanciweb.github.io/demo/api/pictures/")
 
 
 
+            });
+            imgCardEl.addEventListener('mouseenter', function() {
+                console.log('il mouse deve cambiare')
+                console.log(overImg)
             })
         })
 
